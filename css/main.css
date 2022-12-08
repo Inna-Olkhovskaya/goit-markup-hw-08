@@ -222,8 +222,8 @@ img {
   max-height: 600px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
@@ -232,23 +232,49 @@ img {
   background-position: center;
   background-size: cover;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 24px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
+  width: 300px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
   color: #ffffff;
 }
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.62;
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
+}
 .hero__button {
-  padding: 10px 32px;
-  min-width: 216px;
+  padding: 10px 24px;
+  min-width: 200px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .hero__button {
+    padding: 10px 32px;
+    min-width: 216px;
+  }
 }
 .hero__button:focus, .hero__button:hover {
   background-color: #188ce8;
@@ -318,6 +344,15 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.section-derections {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .section-derections {
+    display: block;
+  }
 }
 
 .img {
@@ -811,8 +846,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 320px;
+  min-height: 609px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -823,6 +858,18 @@ img {
   transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1), rotate 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1), rotate 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1), rotate 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    min-width: 450px;
+    min-height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 .is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(1.2) rotate(-360deg);
@@ -873,19 +920,41 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 528px;
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px;
+  padding: 40px 20px;
+}
+@media screen and (min-width: 480px) {
+  .modal-form {
+    width: 450px;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form {
+    width: 528px;
+  }
 }
 .modal-form__header {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  font-size: 16px;
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
   color: #212121;
+}
+@media screen and (min-width: 480px) {
+  .modal-form__header {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__header {
+    line-height: 1.15;
+  }
 }
 .modal-form__field {
   display: -webkit-box;
@@ -905,7 +974,7 @@ img {
   color: #757575;
 }
 .modal-form__input {
-  width: 448px;
+  width: 300px;
   min-height: 40px;
   margin-top: 4px;
   padding: 0 0 0 42px;
@@ -914,6 +983,16 @@ img {
   cursor: pointer;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal-form__input {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__input {
+    width: 448px;
+  }
 }
 .modal-form__input:hover, .modal-form__input:focus {
   border-color: #2196f3;
@@ -933,12 +1012,24 @@ img {
 .modal-form__comments {
   resize: none;
   cursor: pointer;
+  width: 300px;
+  height: 120px;
   margin-top: 4px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal-form__comments {
+    width: 370px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__comments {
+    width: 448px;
+  }
 }
 .modal-form__comments::-webkit-input-placeholder {
   font-size: 12px;
@@ -991,39 +1082,80 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 8.38px;
   cursor: pointer;
 }
+@media screen and (min-width: 480px) {
+  .form-agreement {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .form-agreement__label {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   cursor: pointer;
   color: #757575;
+  margin-left: -11px;
+}
+@media screen and (min-width: 480px) {
+  .form-agreement__label {
+    margin-left: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-agreement__label {
+    font-size: 14px;
+    line-height: 1.71;
+    margin-left: 0;
+  }
 }
 .form-agreement__link {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #2196f3;
 }
+@media screen and (min-width: 1200px) {
+  .form-agreement__link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 .form-agreement__link::after {
   position: absolute;
   content: "";
-  right: 0;
-  width: 115px;
+  right: 60px;
+  width: 98px;
   height: 1px;
   margin-top: 18px;
   border-radius: 2px;
   background-color: #2196f3;
+}
+@media screen and (min-width: 480px) {
+  .form-agreement__link::after {
+    right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-agreement__link::after {
+    width: 115px;
+  }
 }
 .form-agreement__checkbox {
   position: absolute;
@@ -1040,14 +1172,25 @@ img {
 }
 .form-agreement__icon {
   position: absolute;
-  top: 20%;
-  left: -25px;
+  top: 0;
+  left: -36px;
   fill: #ffffff;
   border: 2px solid #212121;
   border-radius: 2px;
   background-color: #ffffff;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .form-agreement__icon {
+    left: -13px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-agreement__icon {
+    top: 20%;
+    left: -25px;
+  }
 }
 .form-agreement__checkbox:checked + .form-agreement__icon {
   border-radius: 2px;

@@ -188,7 +188,7 @@
       right: 60px;
       width: 98px;
       height: 1px;
-      margin-top: 18px;
+      margin-top: 13px;
       border-radius: 2px;
       background-color: $brand-accent;
 
@@ -198,6 +198,7 @@
 
       @media screen and (min-width: 1200px) {
         width: 115px;
+        margin-top: 18px;
       }
     }
   }

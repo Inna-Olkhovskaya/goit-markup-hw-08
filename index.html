@@ -46,6 +46,44 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
+      <!--Mobile menu-->
+      <button type="button" class="mob-menu__open" data-menu-open>
+        <svg width="24" height="16" aria-label="Вмикач мобільного меню">
+          <use class="mob-menu__open--icon" href="./images/icons.svg#icon-menu_24px"></use>
+        </svg>
+      </button>
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <div class="mob-menu__wrap--top">
+          <button type="button" class="mob-menu__close" data-menu-close>
+            <svg width="19" height="19" aria-label="Вимикач мобільного меню">
+              <use class="mob-menu__close--icon" href="./images/icons.svg#icon-close_24px"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item"><a class="mob-menu__link current" href="./index.html">Студія</a></li>
+            <li class="mob-menu__item"><a class="mob-menu__link" href="./portfolio.html">Портфоліо</a></li>
+            <li class="mob-menu__item"><a class="mob-menu__link" href="./index.html">Контакти</a></li>
+          </ul>
+          </div>
+          <div class="mob-menu__wrap--bottom">
+          <ul class="mob-menu-contacts list">
+            <li class="mob-menu-contacts__item">
+              <a class="mob-menu-contacts__link--tel" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+            <li class="mob-menu-contacts__item">
+              <a class="mob-menu-contacts__link--mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mob-menu-soc">
+            <li class="mob-menu-soc__item"><a href="#" class="mob-menu-soc__link">Instagram</a></li>
+            <li class="mob-menu-soc__item"><a href="#" class="mob-menu-soc__link">Twitter</a></li>
+            <li class="mob-menu-soc__item"><a href="#" class="mob-menu-soc__link">Facebook</a></li>
+            <li class="mob-menu-soc__item"><a href="#" class="mob-menu-soc__link">LinkedIn</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <!--Main content-->
@@ -118,15 +156,18 @@
         <h2 class="section__title">Чим ми займаємося</h2>
         <ul class="img list">
           <li class="img__item">
-            <img src="./images/box1.jpg" alt="Десктопні додатки" width="370">
+            <img srcset="./images/box1.jpg 1x, ./images/box1_2x.jpg 2x" src="./images/box1.jpg" alt="Десктопні додатки"
+              width="370">
             <p class="img__label">Десктопні додатки</p>
           </li>
           <li class="img__item">
-            <img src="./images/box2.jpg" alt="Мобільні додатки" width="370">
+            <img srcset="./images/box2.jpg 1x, ./images/box2_2x.jpg 2x" src="./images/box2.jpg" alt="Мобільні додатки"
+              width="370">
             <p class="img__label">Мобільні додатки</p>
           </li>
           <li class="img__item">
-            <img src="./images/box3.jpg" alt="Дизайнерські рішення" width="370">
+            <img srcset="./images/box3.jpg 1x, ./images/box3_2x.jpg 2x" src="./images/box3.jpg"
+              alt="Дизайнерські рішення" width="370">
             <p class="img__label">Дизайнерські рішення</p>
           </li>
         </ul>
@@ -138,7 +179,12 @@
         <h2 class="section__title">Наша команда</h2>
         <ul class="team__set list">
           <li class="team__item">
-            <img src="./images/img1.jpg" alt="Ігор Дем'яненко" width="270">
+            <picture>
+              <source srcset="./images/img1.jpg 1x, ./images/img1_2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/img1_tablet.jpg 1x, ./images/img1_tablet_2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/img1_mobile.jpg 1x, ./images/img1_mobile_2x.jpg 2x" media="(max-width: 767px)" />
+              <img src="./images/img1_mobile.jpg" alt="Ігор Дем'яненко" width="450">
+            </picture>
             <div class="person-card">
               <h3 class="person-card__name">Ігор Дем'яненко</h3>
               <p lang="en" class="person-card__job">Product Designer</p>
@@ -175,7 +221,12 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/img2.jpg" alt="Ольга Рєпіна" width="270">
+            <picture>
+              <source srcset="./images/img2.jpg 1x, ./images/img2_2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/img2_tablet.jpg 1x, ./images/img2_tablet_2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/img2_mobile.jpg 1x, ./images/img2_mobile_2x.jpg 2x" media="(max-width: 767px)" />
+              <img src="./images/img2_mobile.jpg" alt="Ольга Рєпіна" width="450">
+            </picture>
             <div class="person-card">
               <h3 class="person-card__name">Ольга Рєпіна</h3>
               <p lang="en" class="person-card__job">Frontend Developer</p>
@@ -212,7 +263,12 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/img3.jpg" alt="Микола Тарасов" width="270">
+            <picture>
+              <source srcset="./images/img3.jpg 1x, ./images/img3_2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/img3_tablet.jpg 1x, ./images/img3_tablet_2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/img3_mobile.jpg 1x, ./images/img3_mobile_2x.jpg 2x" media="(max-width: 767px)" />
+              <img src="./images/img3_mobile.jpg" alt="Микола Тарасов" width="450">
+            </picture>
             <div class="person-card">
               <h3 class="person-card__name">Микола Тарасов</h3>
               <p lang="en" class="person-card__job">Marketing</p>
@@ -249,7 +305,12 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/img4.jpg" alt="Михайло Єрмаков" width="270">
+            <picture>
+              <source srcset="./images/img4.jpg 1x, ./images/img4_2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/img4_tablet.jpg 1x, ./images/img4_tablet_2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/img4_mobile.jpg 1x, ./images/img4_mobile_2x.jpg 2x" media="(max-width: 767px)" />
+              <img src="./images/img4_mobile.jpg" alt="Михайло Єрмаков" width="450">
+            </picture>
             <div class="person-card">
               <h3 class="person-card__name">Михайло Єрмаков</h3>
               <p lang="en" class="person-card__job">UI Designer</p>
@@ -450,6 +511,7 @@
     </div>
   </div>
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

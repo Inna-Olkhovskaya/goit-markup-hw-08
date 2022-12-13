@@ -7,7 +7,11 @@
     align-items: center;
     height: 60px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and(max-width: 767px) {
+      justify-content: space-between;
+    }
+
+    @include tablet {
     height: 80px;
   }
   }

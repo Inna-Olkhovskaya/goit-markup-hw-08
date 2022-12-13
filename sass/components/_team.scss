@@ -4,12 +4,12 @@
   &__set {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: $set-gap;
     padding: 0;
     list-style: none;
 
-    @media screen and (min-width: 1200px) {
-      column-gap: 30px;
+    @include desktop {
+      column-gap: $set-gap;
     }
   }
 
@@ -22,11 +22,11 @@
 
     width: 100%;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: calc((100% - 30px) / 2);
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       width: calc((100% - 90px) / 4);
     }
   }

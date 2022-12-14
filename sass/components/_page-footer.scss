@@ -26,7 +26,7 @@
     }
 
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
-      justify-content: space-between;
+      justify-content: space-around;
     }
 
     @include desktop {

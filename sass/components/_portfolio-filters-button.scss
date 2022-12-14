@@ -1,8 +1,18 @@
 .button-set {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
   list-style: none;
+
+  @include tablet {
+      margin-bottom: 30px;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+  @include desktop {
+      margin-bottom: 50px;
+    }
 
   &__item:not(:last-child) {
     margin-right: 8px;
